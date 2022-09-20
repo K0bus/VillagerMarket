@@ -5,6 +5,7 @@
 
 package net.bestemor.villagermarket.menu;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import net.bestemor.core.config.ConfigManager;
 import net.bestemor.core.menu.Clickable;
 import net.bestemor.core.menu.Menu;
@@ -20,7 +21,7 @@ public class ConfirmActionMenu extends Menu {
     private final Runnable cancel;
 
     public ConfirmActionMenu(MenuListener listener, Runnable accept, Runnable cancel) {
-        super(listener, 27, ConfigManager.getString("menus.confirm_action.title"));
+        super(listener, 27, PlaceholderAPI.setPlaceholders(null, ConfigManager.getString("menus.confirm_action.title")));
         this.accept = accept;
         this.cancel = cancel;
     }

@@ -1,5 +1,6 @@
 package net.bestemor.villagermarket.menu;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import net.bestemor.core.config.ConfigManager;
 import net.bestemor.core.menu.Clickable;
 import net.bestemor.core.menu.Menu;
@@ -25,7 +26,7 @@ public class BuyShopMenu extends Menu {
     private final PlayerShop shop;
 
     public BuyShopMenu(VMPlugin plugin, PlayerShop shop) {
-        super(plugin.getMenuListener(), 27, ConfigManager.getString("menus.buy_shop.title"));
+        super(plugin.getMenuListener(), 27, PlaceholderAPI.setPlaceholders(null, ConfigManager.getString("menus.buy_shop.title")));
         this.plugin = plugin;
         this.shop = shop;
     }
